@@ -1,0 +1,214 @@
+/* General styling: Minimalist with soft tones and contrast */
+body, html {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(135deg, #E8F0FF, #F7FFF5);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    color: #333;
+    padding-top: 60px; /* Adjusted padding for the new navbar height */
+}
+
+/* Header: Sleek, transparent, and gradient style */
+.Header-Container {
+    width: 100%;
+    background: rgba(255, 107, 107, 0.85); /* Transparent background */
+    padding: 10px 0; /* Reduced padding for a sleeker look */
+    text-align: center;
+    color: white;
+    font-size: 1.4rem; /* Slightly larger font for balance */
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    backdrop-filter: blur(8px); /* Adding blur for a modern glass effect */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1); /* Soft border */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for the navbar */
+.Header-Container:hover {
+    background: rgba(255, 107, 107, 1); /* Slight color change on hover */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2); /* Bolder shadow on hover */
+}
+
+/* Navbar links styling: Clean and minimalistic */
+.navbar-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between links */
+    padding: 10px 0;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.navbar-links a:hover {
+    color: #FFC857; /* Accent color on hover */
+    transform: scale(1.1); /* Slight scale-up effect */
+}
+
+/* Form Container: Soft gradient, border radius, and shadow for a fresh look */
+.Form-Container {
+    background: linear-gradient(135deg, #A0C4FF, #BDB2FF);
+    padding: 40px;
+    margin: 80px auto; /* Adjusted margin to avoid overlapping with navbar */
+    width: 80%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.Form-Container:hover {
+    transform: translateY(-5px);
+}
+
+/* Form labels and inputs: Minimalist style */
+.Form-Container p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+}
+
+.Form-Container input, 
+.Form-Container select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 1rem;
+    color: #555;
+    transition: border-color 0.3s ease;
+}
+
+.Form-Container input:focus,
+.Form-Container select:focus {
+    border-color: #FF6B6B;
+    outline: none;
+}
+
+/* Submit Button: Bold color with gradient and hover effect */
+.submit-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #00C9A7, #92FE9D);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* No Items message: Large, vibrant color for a clear message */
+.No-Items {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #FF6B6B;
+    margin-top: 20px;
+}
+
+/* Container for buttons: Rounded container with clean layout */
+.Container-btns {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background: #FFD93D;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    padding: 12px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #FFC857;
+    transform: translateY(-5px);
+}
+
+/* Item List Container: Clean, card-style layout with shadow */
+.Itemlist-Container {
+    background-color: white;
+    margin: 70px auto; /* Adjusted margin to avoid overlap with navbar */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+/* Table: Minimalist table style with zebra striping */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #FF6B6B;
+    color: white;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #F0F0F0;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #FFFFFF;
+}
+
+/* Subtle Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.7s ease-in-out;
+}
+
+/* Scale-up for interactivity */
+@keyframes scaleUp {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.scale-up {
+    animation: scaleUp 0.5s ease-in;
+}
